@@ -93,21 +93,25 @@ export default function HomePage() {
               <li>Scheduled deliveries</li>
             </ul>
           </div>
-          <div className="hero-visual frame">
-            <img
-              src="/images/hero.jpg"
-              alt="A cup of coffee with latte art in the shape of a leaf"
-              width="1800"
-              height="1200"
-            />
+          <div className="hero-visual">
+            <figure className="frame">
+              <img
+                src="/images/hero.jpg"
+                alt="A cup of coffee with latte art in the shape of a leaf"
+                width="1800"
+                height="1200"
+              />
+            </figure>
             <div className="hero-card">
               <p className="kicker">Call today</p>
-              {phones.map((phone) => (
-                <p key={phone.id}>
-                  <strong>{phone.region}</strong>
-                  <a href={`tel:${phone.tel}`}>{phone.display}</a>
-                </p>
-              ))}
+              <div className="hero-card-phones">
+                {phones.map((phone) => (
+                  <p key={phone.id}>
+                    <strong>{phone.region}</strong>
+                    <a href={`tel:${phone.tel}`}>{phone.display}</a>
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
