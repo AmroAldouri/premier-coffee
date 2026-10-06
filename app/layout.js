@@ -1,12 +1,13 @@
-import { Fraunces, Outfit } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import CallBar from "../components/CallBar";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import { company, email } from "../lib/site";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
   style: ["normal", "italic"],
   display: "swap",
   variable: "--font-display",
@@ -49,7 +50,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-CA" className={`${fraunces.variable} ${outfit.variable}`}>
+    <html lang="en-CA" className={`${plusJakarta.variable} ${outfit.variable}`}>
       <body>
         <a className="skip" href="#content">
           Skip to content
